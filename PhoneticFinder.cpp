@@ -44,7 +44,7 @@ namespace phonetic {
 				if (i==text.length()-1 && text[i] != ' '){
 					index++;
 				}
-				temp = text.substr(last,j);
+				temp = text.substr(last,index);
 				if(temp.length()==word.length()){
 					if(check_letters(temp,word)){
 						return temp;
