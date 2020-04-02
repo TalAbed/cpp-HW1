@@ -13,7 +13,7 @@ namespace phonetic {
 		{'k', 'c', 'q'}, {'l'}, {'m'}, {'n'}, {'o', 'u'}, {'p', 'b', 'f'}, {'q', 'c', 'k'}, {'r'}, {'s', 'z'}, {'t', 'd'}, {'u', 'o'}, {'v', 'w'},
 		{'w', 'v'}, {'x'}, {'y', 'i'}, {'z', 's'}};
 		int count = 0;
-		for (int i=0;i<wordFromText.lenght();i++){
+		for (int i=0;i<wordFromText.length();i++){
 			wordFromText[i] = tolower(wordFromText[i]);
 			word[i] = tolower(word[i]);
 			if (wordFromText[i] != word[i]){
@@ -27,7 +27,7 @@ namespace phonetic {
 				count++;
 			}
 		}
-		if (count == word.lenght()){
+		if (count == word.length()){
 				return true;
 			}
 			return false;
@@ -39,13 +39,13 @@ namespace phonetic {
 		string temp = "";
 		int index = 0;
 		int last = 0;
-		for (int i=0; i<text.lenght(); i++){
-			if (i==text.lenght()-1 || text[i]==' '){
-				if (i==text.lenght()-1 && text[i] != ' '){
+		for (int i=0; i<text.length(); i++){
+			if (i==text.length()-1 || text[i]==' '){
+				if (i==text.length()-1 && text[i] != ' '){
 					index++;
 				}
 				temp = text.substr(last,j);
-				if(temp.lenght()==word.lenght()){
+				if(temp.length()==word.length()){
 					if(check_letters(temp,word)){
 						return temp;
 					}
