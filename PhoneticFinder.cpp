@@ -57,6 +57,6 @@ namespace phonetic {
 				index++;
 			}
 		}
-		throw noWordExp(word);
+		throw runtime_error("did not find the word " + word + " in the text");
 	}
 }
